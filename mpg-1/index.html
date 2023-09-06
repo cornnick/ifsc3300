@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miles Per Gallon Calculator</title>
+    <link rel="stylesheet" href="mpg.css">
+</head>
+<body>
+    <main>
+        <h1>The Miles Per Gallon Calculator</h1>
+        <noscript>
+            <p>If Javascript is disabled in your browser, you won't be able to use this application. 
+                Please enable Javascript in your browser settings.</p>
+        </noscript>
+        <script>
+            alert("The Calculate MPG Application");
+            
+            // get miles driven from user
+            let miles = prompt("Enter miles driven");
+            miles = parseInt(miles);
+
+            // get gallons used from user
+            let gallons = 
+                prompt("Enter gallons of gas used");
+            gallons = parseInt(gallons);
+
+            // calculate mpg
+            let mpg = miles/gallons;
+            mpg = parseFloat(mpg);
+
+            // display results
+            alert("Miles per gallon = " + mpg);
+        </script>    
+    </main>
+</body>
+</html>
