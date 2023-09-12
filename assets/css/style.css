@@ -127,6 +127,7 @@
         padding: auto;
         margin: 25px;
       }
+      /*makes last child take span 3
       ul li:last-child {
         grid-column: span 3;
         grid-row: 4;
@@ -134,6 +135,7 @@
         align-self: center;
       }
     }
+    */
     
     /* Medium screens */
     @media screen and (max-width: 991px) {
