@@ -2,8 +2,8 @@
 
 const scores = [];
 
-const highestScore = 0;
-const lowestScore = 0;
+let highestScore = 0;
+let lowestScore = 101;
 
 // use do-while loop to get the scores from the user
 let score = 0;
@@ -31,6 +31,25 @@ if (scores.length > 0) {
     //calculate and display the average
     const average = parseInt(total/scores.length);
     document.write(`<p>The average score is ${average}.</p>`);
+
+    //goes through the scores array 
+    //asks if the score is greater than the last score score
+    //then changes the value of the highestScore variable
+
+    for (const score of scores) {
+        if (score > highestScore) {
+            highestScore = score;
+        }
+    }
+
+    for (const score of scores) {
+        if (score < lowestScore) {
+            lowestScore = score;
+        }
+    }
+
+    document.write(`<p>The highest score is ${highestScore}.</p>`);
+    document.write(`<p>The lowest score is ${lowestScore}.</p>`);
 
     /* figures and displays the highest score
     const maxScore = Math.max(...scores);
