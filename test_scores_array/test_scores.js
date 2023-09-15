@@ -26,12 +26,23 @@ if (scores.length > 0) {
     for (let i in scores) {
         total = total + scores[i];
         document.write(`<p>Score ${parseInt(i) + 1}: ${scores[i]}</p>`);
+
+        if (scores[i] > highestScore) {
+            highestScore = scores[i];
+        }
+
+        if (scores[i] < lowestScore) {
+            lowestScore = scores[i];
+        }
     }
 
-    //calculate and display the average
+    //calculates average and writes the average, highest, and lowest score to html
     const average = parseInt(total/scores.length);
     document.write(`<p>The average score is ${average}.</p>`);
+    document.write(`<p>The highest score score is ${highestScore}.</p>`);
+    document.write(`<p>The lowest score is ${lowestScore}.</p>`);
 
+    /*separate for-loop for highest and lowest scores
     //goes through the scores array 
     //asks if the score is greater than the last score score
     //then changes the value of the highestScore variable
@@ -49,7 +60,7 @@ if (scores.length > 0) {
     }
 
     document.write(`<p>The highest score is ${highestScore}.</p>`);
-    document.write(`<p>The lowest score is ${lowestScore}.</p>`);
+    document.write(`<p>The lowest score is ${lowestScore}.</p>`); */
 
     /* figures and displays the highest score
     const maxScore = Math.max(...scores);
