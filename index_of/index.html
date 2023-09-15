@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Of Practice</title>
+    <title>Index Of - Searching in Forms Practice</title>
 </head>
 <body>
     <p>Enter a word and a sentence and determine whether the word is in the sentence.</p>
-    <form>
+    <form id="wordSearch">
         Word:
         <br>
-        <textarea rows = "1" cols = "30" name = "Word" placeholder="Enter your word here."></textarea>
+        <textarea rows = "1" cols = "30" name = "Word" id = "wordInput" placeholder="Enter your word here."></textarea>
         <br>
         Sentence:
         <br>
-        <textarea rows = "5" cols = "30" name = "Sentence" placeholder="Enter your sentence here."></textarea>
+        <textarea rows = "5" cols = "30" name = "Sentence" id = "sentenceInput" placeholder="Enter your sentence here."></textarea>
         <br>
         <input type = "submit" value = "Search" />
         <input type = "reset" value = "Clear" />
 
     </form>
+
+    <script src="index_of.js"></script>
+
 </body>
 </html>
