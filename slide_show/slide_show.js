@@ -34,9 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // attach start and pause event handlers
     $("#start").addEventListener("click", () => {
+        $("#start").disabled = true;
+        $("#pause").disabled = false;
 
+         runSlideShow();
+
+         // Set up the timer to change the slide every 2 seconds
+         timer = setInterval(runSlideShow, 2000);
     });
-    $("#pause").addEventListener("click", () => {
 
+    $("#pause").addEventListener("click", () => {
+        $("#start").disabled = false;
+        $("#pause").disabled = true;
+
+        clearInterval(timer);
     });
 });
