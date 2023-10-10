@@ -48,7 +48,9 @@ const processEntries = () => {
     // If no error, calculate and display future value
     if (errorMessage === '') {
         const futureValue = calculateFV(investmentAmount, interestRate, numberOfYears);
-        $('#future_value').value = futureValue.toFixed(2); // Display result rounded to two decimal places
+        $('#future_value').value = futureValue; // Display futureValue
+
+        $('#investment').focus();
     } else {
         // If there is an error, display the error message
         alert(errorMessage);
