@@ -10,9 +10,14 @@ body {
     border: 3px solid blue;
     padding: 15px 25px;
 }
-h1 { 
-    font-size: 150%;
+#faqs h1 {
+    position: relative;
+    left: -175px;
+    font-size: 75%;
+    opacity: .2;
+    color: blue;
 }
+
 h2 {
     font-size: 120%;
     padding: .25em 0 .25em 25px;
