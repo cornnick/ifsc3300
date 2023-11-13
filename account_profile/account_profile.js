@@ -31,7 +31,7 @@ $( document ).ready( () => {
         const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
         const zipPattern = /^\d{5}(-\d{4})?$/;
         const datePattern = /^[01]?\d\/[0-3]\d\/\d{4}$/;
-        const cardPattern = /^\d{16}$/;
+        const cardPattern = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
         const ccdatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
         
         // check user entries for validity
@@ -55,10 +55,10 @@ $( document ).ready( () => {
 
         if (!cardPattern.test(card)) {
             isValid = false;
-            $("#card").next().text("Please enter a valid 16-digit credit card number.");
+            $("#card").next().text("Please enter a valid credit card number in NNNN-NNNN-NNNN-NNNN.");
         }
 
-        if (ccdate === "" || !ccdatePattern.test(ccdate)) {
+        if (ccdate === "" || !ccdatePattern.test(cc-date)) {
             isValid = false;
             $("#cc-date").next().text("Please enter a valid expiration date in MM/YY format.");
         }
