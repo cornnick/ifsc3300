@@ -55,10 +55,10 @@ $( document ).ready( () => {
 
         if (!cardPattern.test(card)) {
             isValid = false;
-            $("#card").next().text("Please enter a valid credit card number in NNNN-NNNN-NNNN-NNNN.");
+            $("#card").next().text("Please enter a CC# number in NNNN-NNNN-NNNN-NNNN.");
         }
 
-        if (ccdate === "" || !ccdatePattern.test(cc-date)) {
+        if (ccdate === "" || !ccdatePattern.test(ccdate)) {
             isValid = false;
             $("#cc-date").next().text("Please enter a valid expiration date in MM/YY format.");
         }
@@ -75,3 +75,45 @@ $( document ).ready( () => {
     // set focus on initial load
     $("#email").focus();
 });
+
+
+
+
+
+//NEW NUMBERARRAY
+
+class NumberArray {
+    constructor() {
+            this._numbers = [];
+            this.lastNumber = null;
+         }
+         
+    get length() {
+            return this._numbers.length;
+         }
+
+    push(num) {
+            if(typeof num === "number") {
+                    this._numbers.push(num);
+                    this.lastNumber = num;
+            } else {
+                 throw new TypeError("NumberArray can only store numbers");
+                 } 
+            }
+            toString() {
+                 return this._numbers.toString(); 
+                } 
+            }
+
+
+            const arr = new NumberArray();
+            arr.push(1.07);
+            arr.push(2.21);
+            arr.push(3.14);
+            // arr.push("Grace");
+            console.log(arr.lastNumber); 
+            console.log(arr.length); 
+            console.log(arr.toString());
+             // arr.unshift("Grace");
+            
+    
