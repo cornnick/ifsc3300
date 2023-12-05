@@ -52,3 +52,11 @@ th, td {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+/* This style will apply only to the showPassword checkbox */
+#showPassword {
+    margin-left: -5.4em; /* Adjust this value so that the checkbox aligns with your input fields */
+    transform: scale(1.3); /* Increase the size of the checkbox */
+}
+
+

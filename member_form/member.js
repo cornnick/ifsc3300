@@ -15,6 +15,16 @@ $(document).ready( () => {
             $("#company_name").next().text("");
         }
     });
+
+    $("#showPassword").change( () => {
+        if ($("#showPassword").is(":checked")) {
+            $("#password").attr("type", "text");
+            $("#verify").attr("type", "text");
+        } else {
+            $("#password").attr("type", "password");
+            $("#verify").attr("type", "password");
+        }
+    });
     
     // the handler for the click event of the submit button
     $("#member_form").submit( event => {
@@ -108,5 +118,7 @@ $(document).ready( () => {
             event.preventDefault();                
         }
     });
+
+
 
 });
