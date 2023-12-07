@@ -53,8 +53,20 @@ $(document).ready( () => {
         $("#task").focus();
     });   
     
-    $("#filter").click( () => {
+    $("#filter").click(() => {
+        const searchTerm = prompt("Enter the text to search for (leave empty to display all tasks):");
 
+        if (searchTerm === "") {
+            displayTaskList(tasks);
+        } else {
+            const lowerCaseSearchTerm = searchTerm.toLowerCase();
+            const filteredTasks = tasks.filter(task => {
+                const taskText = task[0].toLowerCase();
+                const taskDate = task[1].toLowerCase();
+                return taskText.includes(lowerCaseSearchTerm) || taskDate.includes(lowerCaseSearchTerm);
+            });
+            displayTaskList(filteredTasks);
+        }
     });
     
     displayTaskList(tasks);
